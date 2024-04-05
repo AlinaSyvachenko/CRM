@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <title>CRM</title>
+  </head>
+  <body class="body">
+    <header class="header">
+      <nav class="nav">
+        <ul class="nav__container">
+          <li>
+            <a class="nav__logo" href="#">
+              <svg class="nav__logo-svg" width="37" height="37">
+                <use href="./img/icone.svg#icon-logo"></use>
+              </svg>
+              <p class="nav__logo-text">
+                Dashboard <span class="nav__logo-text--accent">v.01</span>
+              </p>
+            </a>
+          </li>
+
+          <li>
+            <button class="nav__item">
+              <svg class="nav__svg" width="24" height="24">
+                <use href="./img/icone.svg#icon-key"></use>
+              </svg>
+              Dashboard
+            </button>
+          </li>
+          <li>
+            <button class="nav__item">
+              <svg class="nav__svg" width="24" height="24">
+                <use href="./img/icone.svg#icon-product"></use>
+              </svg>
+              Product
+              <svg class="nav__arrow" width="16" height="16">
+                <use href="./img/icone.svg#icon-arrow"></use>
+              </svg>
+            </button>
+          </li>
+          <li>
+            <button class="nav__item">
+              <svg class="nav__svg" width="24" height="24">
+                <use href="./img/icone.svg#icon-contact"></use>
+              </svg>
+              Customers
+              <svg class="nav__arrow" width="16" height="16">
+                <use href="./img/icone.svg#icon-arrow"></use>
+              </svg>
+            </button>
+          </li>
+          <li>
+            <button class="nav__item">
+              <svg class="nav__svg" width="24" height="24">
+                <use href="./img/icone.svg#icon-wallet"></use>
+              </svg>
+              Income
+              <svg class="nav__arrow" width="16" height="16">
+                <use href="./img/icone.svg#icon-arrow"></use>
+              </svg>
+            </button>
+          </li>
+          <li>
+            <button class="nav__item">
+              <svg class="nav__svg" width="24" height="24">
+                <use href="./img/icone.svg#icon-precent"></use>
+              </svg>
+              Promote
+              <svg class="nav__arrow" width="16" height="16">
+                <use href="./img/icone.svg#icon-arrow"></use>
+              </svg>
+            </button>
+          </li>
+          <li>
+            <button class="nav__item">
+              <svg class="nav__svg" width="24" height="24">
+                <use href="./img/icone.svg#icon-message-question"></use>
+              </svg>
+              Help
+              <svg class="nav__arrow" width="16" height="16">
+                <use href="./img/icone.svg#icon-arrow"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__user-container">
+        <img
+          class="header__user-foto"
+          src="./img/foto-evano.png"
+          alt="foto user"
+        />
+        <div>
+          <p class="header__user-name">Evano</p>
+          <p class="header__user-position">Project Manager</p>
+        </div>
+      </div>
+      <button class="nav__button-burger" id="burger" type="button">
+        <span class="nav__button-burger-item"></span>
+        <span class="nav__button-burger-item"></span>
+        <span class="nav__button-burger-item"></span>
+      </button>
+    </header>
+    <main class="main">
+      <h1 class="hero-title">Hello Evano &#128075;&#127995;,</h1>
+      <section class="section section-dashboard"></section>
+      <section class="section section-product"></section>
+      <!-- section-customers done -->
+      <section class="section section-customers">
+        <div class="section-customers__top-container">
+          <div>
+            <h2 class="section-customers__title">All Customers</h2>
+            <p class="section-customers__status">Active Members</p>
+          </div>
+          <form
+            class="section-customers__form-serch"
+            action="/search"
+            method="GET"
+          >
+            <input
+              class="section-customers__form-serch-input"
+              type="text"
+              name="search"
+              placeholder="Search"
+            />
+            <button class="section-customers__form-serch-button" type="submit">
+              <svg class="" width="24" height="24">
+                <use href="./img/icone.svg#icon-magnifying-glass"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+        <ul class="section-customers__list-header">
+          <li>Customer Name</li>
+          <li>Company</li>
+          <li>Phone Number</li>
+          <li>Email</li>
+          <li>Country</li>
+          <li>Status</li>
+        </ul>
+        <ul class="section-customers__list-user">
+          <li title="Customer Name">Jane Cooper</li>
+          <li title="Company">Microsoft</li>
+          <li><a class="link" href="tel:+2255550118">(225) 555-0118</a></li>
+          <li>
+            <a class="link" href="mailto:jane@microsoft.com"
+              >jane@microsoft.com</a
+            >
+          </li>
+          <li title="Country">United States</li>
+          <li>
+            <button class="section-customers__button-active">Active</button>
+          </li>
+        </ul>
+        <ul class="section-customers__list-user">
+          <li title="Customer Name">Floyd Miles</li>
+          <li title="Company">Yahoo</li>
+          <li><a class="link" href="tel:+2055550100">(205) 555-0100</a></li>
+          <li>
+            <a class="link" href="mailto:floyd@yahoo.com">floyd@yahoo.com</a>
+          </li>
+          <li title="Country">Kiribati</li>
+          <li>
+            <button class="section-customers__button-inactive">Inactive</button>
+          </li>
+        </ul>
+        <ul class="section-customers__list-user">
+          <li title="Customer Name">Ronald Richards</li>
+          <li title="Company">Adobe</li>
+          <li><a class="link" href="tel:+3025550107">(302) 555-0107</a></li>
+          <li>
+            <a class="link" href="mailto:ronald@adobe.com">ronald@adobe.com</a>
+          </li>
+          <li title="Country">Israel</li>
+          <li>
+            <button class="section-customers__button-inactive">Inactive</button>
+          </li>
+        </ul>
+        <ul class="section-customers__list-user">
+          <li title="Customer Name">Marvin McKinney</li>
+          <li title="Company">Tesla</li>
+          <li><a class="link" href="tel:+2525550126">(252) 555-0126</a></li>
+          <li>
+            <a class="link" href="mailto:marvin@tesla.com">marvin@tesla.com</a>
+          </li>
+          <li title="Country">Iran</li>
+          <li>
+            <button class="section-customers__button-active">Active</button>
+          </li>
+        </ul>
+        <ul class="section-customers__list-user">
+          <li title="Customer Name">Jerome Bell</li>
+          <li title="Company">Google</li>
+          <li><a class="link" href="tel:+6295550129">(629) 555-0129</a></li>
+          <li>
+            <a class="link" href="mailto:jerome@google.com"
+              >jerome@google.com</a
+            >
+          </li>
+          <li title="Country">Réunion</li>
+          <li>
+            <button class="section-customers__button-active">Active</button>
+          </li>
+        </ul>
+        <ul class="section-customers__list-user">
+          <li title="Customer Name">Kathryn Murphy</li>
+          <li title="Company">Microsoft</li>
+          <li><a class="link" href="tel:+4065550120">(406) 555-0120</a></li>
+          <li>
+            <a class="link" href="mailto:kathryn@microsoft.com"
+              >kathryn@microsoft.com</a
+            >
+          </li>
+          <li title="Country">Curaçao</li>
+          <li>
+            <button class="section-customers__button-active">Active</button>
+          </li>
+        </ul>
+        <ul class="section-customers__list-user">
+          <li title="Customer Name">Jacob Jones</li>
+          <li title="Company">Yahoo</li>
+          <li><a class="link" href="tel:+2085550112">(208) 555-0112</a></li>
+          <li>
+            <a class="link" href="mailto:jacob@yahoo.com">jacob@yahoo.com</a>
+          </li>
+          <li title="Country">Brazil</li>
+          <li>
+            <button class="section-customers__button-active">Active</button>
+          </li>
+        </ul>
+        <ul class="section-customers__list-user">
+          <li title="Customer Name">Kristin Watson</li>
+          <li title="Company">Facebook</li>
+          <li><a class="link" href="tel:+7045550127">(704) 555-0127</a></li>
+          <li>
+            <a class="link" href="mailto:kristin@facebook.com"
+              >kristin@facebook.com</a
+            >
+          </li>
+          <li title="Country">Åland Islands</li>
+          <li>
+            <button class="section-customers__button-inactive">Inactive</button>
+          </li>
+        </ul>
+        <div class="section-customers__bottom-container">
+          <p class="section-customers__number-applications">
+            Showing data 1 to 8 of 256K entries
+          </p>
+          <div>
+            <button class="section-customers__button-page">
+              <svg
+                class="section-customers__button-arrow-left"
+                width="8"
+                height="12"
+              >
+                <use href="./img/icone.svg#icon-arrow"></use>
+              </svg>
+            </button>
+            <button class="section-customers__button-page">1</button>
+            <button class="section-customers__button-page">2</button>
+            <button class="section-customers__button-page">3</button>
+            <button class="section-customers__button-page">4</button>
+            <button class="section-customers__button-miss">...</button>
+            <button class="section-customers__button-page">40</button>
+            <button class="section-customers__button-page">
+              <svg
+                class="section-customers__button-arrow-right"
+                width="8"
+                height="12"
+              >
+                <use href="./img/icone.svg#icon-arrow"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="section section-income"></section>
+      <section class="section section-promote"></section>
+      <section class="section section-help"></section>
+    </main>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

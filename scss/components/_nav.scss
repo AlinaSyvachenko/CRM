@@ -1,0 +1,154 @@
+.nav {
+  padding-right: 16px;
+
+  &__container {
+    @media screen and (max-width: 1024px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  
+  &.open .nav__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 8px;
+    margin-top: 16px;
+  }
+
+  &__logo {
+    display: flex;
+    margin-top: 36px;
+    margin-bottom: 64px;
+    align-items: center;
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 34px;
+      margin-top: 32px;
+    }
+        @media screen and (max-width: 768px) {
+            margin-top: 24px;
+      margin-bottom: 0;
+    }
+  }
+  &__logo-text {
+    font-weight: 600;
+    font-size: 26px;
+    color: #000;
+    margin-bottom: 0;
+    @media screen and (max-width: 1024px) {
+      font-size: 14px;
+    }
+
+    &--accent {
+      font-weight: 500;
+      font-size: 10px;
+      color: #838383;
+      @media screen and (max-width: 1024px) {
+        font-size: 8px;
+      }
+    }
+  }
+
+  &__logo-svg {
+    margin-right: 8px;
+    @media screen and (max-width: 1024px) {
+      margin-right: 2px;
+    }
+  }
+
+  &__item {
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--color-brand-blue-light);
+    position: relative;
+    width: 232px;
+    margin-bottom: 18px;
+    padding: 11px 8px 11px 11px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, stroke 0.3s ease;
+    &:focus {
+      background-color: var(--color-brand-violet);
+      color: white;
+    }
+    &:focus svg {
+      stroke: white;
+    }
+    @media screen and (max-width: 1024px) {
+      width: auto;
+      margin-bottom: 0;
+      font-size: 12px;
+      gap: 8px;
+      padding: 11px 8px;
+    }
+  }
+
+  &__svg {
+    fill: transparent;
+    stroke: var(--color-brand-blue-light);
+    stroke-width: 1;
+  }
+
+  &__arrow {
+    fill: transparent;
+    stroke: var(--color-brand-blue-light);
+    stroke-width: 1;
+    position: absolute;
+    right: 0;
+    margin-right: 8px;
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__button-burger {
+    display: none;
+    @media screen and (max-width: 768px) {
+      display: block;
+      position: absolute;
+      top: 40px;
+      right: 50px;
+      width: 48px;
+      height: 48px;
+      background-color: transparent;
+      border: 1px solid var(--color-brand-blue);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+            @media screen and (max-width: 532px) {
+        width: 32px;
+        height: 32px;
+        right: 20px;
+        top: 30px;
+    }
+  }
+  &__button-burger-item {
+    display: block;
+    background-color: var(--color-brand-blue);
+    width: 12px;
+    height: 2px;
+    position: absolute;
+    left: 18px;
+    transition: transform 0.3s, opacity 0.3s;
+
+                @media screen and (max-width: 532px) {
+       left: 9px;
+    }
+    &:nth-child(1) {
+      transform: translateY(-5px);
+      
+    }
+
+    &:nth-child(2) {
+      transform: translateY(5px);
+    }
+  }
+
+}

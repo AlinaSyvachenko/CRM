@@ -1,0 +1,179 @@
+.section-customers {
+  margin-left: 72px;
+  margin-top: 52px;
+  margin-right: 72px;
+  background-color: white;
+  box-shadow: 0 10px 60px 0 rgba(226, 236, 249, 0.5);
+  border-radius: 30px;
+  padding: 30px 38px;
+  padding-top: 30px;
+  padding-left: 38px;
+  position: relative;
+  @media screen and (max-width: 1288px) {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  @media screen and (max-width: 768px) {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 8px;
+  }
+
+  &__top-container {
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 768px) {
+      background-color: white;
+      box-shadow: 0 10px 60px 0 rgba(226, 236, 249, 0.5);
+      border-radius: 30px;
+      padding: 16px;
+    }
+    @media screen and (max-width: 532px) {
+      flex-wrap: wrap;
+    }
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 22px;
+    color: #000;
+    margin-bottom: 8px;
+  }
+  &__status {
+    color: #16c098;
+    font-weight: 400;
+    margin-bottom: 44px;
+    @media screen and (max-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+  &__form-serch {
+    position: relative;
+    margin-top: 10px;
+  }
+  &__form-serch-input {
+    width: 216px;
+    height: 38px;
+    border-radius: 10px;
+    background-color: #f9fbff;
+    border: transparent;
+    &::placeholder {
+      padding-left: 40px;
+      font-weight: 400;
+      font-size: 12px;
+      color: #b5b7c0;
+    }
+  }
+  &__form-serch-button {
+    position: absolute;
+    left: 0;
+    fill: transparent;
+    stroke: var(--color-brand-blue-light);
+    stroke-width: 1;
+    border: transparent;
+    background-color: transparent;
+    padding: 8px 7px;
+    cursor: pointer;
+  }
+
+  &__list-header {
+    color: #b5b7c0;
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr 1fr;
+    gap: 28px;
+    &::after {
+      content: '';
+      border-bottom: 1px solid #eee;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 156px;
+    }
+    @media screen and (max-width: 1288px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  &__list-user {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr 1fr;
+    gap: 28px;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    @media screen and (max-width: 1288px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      font-size: 12px;
+    }
+
+    @media screen and (max-width: 768px) {
+      background-color: white;
+      box-shadow: 0 10px 60px 0 rgba(226, 236, 249, 0.5);
+      border-radius: 30px;
+      padding: 16px 32px;
+      margin-top: 20px;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      font-size: 14px;
+    }
+    @media screen and (max-width: 532px) {
+      padding: 16px;
+    }
+  }
+  &__button-active {
+    @include button(#008767, rgba(22, 192, 152, 0.38), 1px solid #00b087);
+  }
+  &__button-inactive {
+    @include button(#df0404, #ffc5c5, 1px solid #df0404);
+  }
+
+  &__bottom-container {
+    padding-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__number-applications {
+    color: #b5b7c0;
+  }
+  &__button-arrow-left {
+    transform: rotate(180deg);
+    fill: transparent;
+    stroke: #404b52;
+    stroke-width: 1;
+  }
+  &__button-arrow-right {
+    fill: transparent;
+    stroke: #404b52;
+    stroke-width: 1;
+  }
+  &__button-page {
+    border: 1px solid #eee;
+    border-radius: 4px;
+    width: 26px;
+    height: 24px;
+    background-color: #f5f5f5;
+    color: #404b52;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, stroke 0.3s ease;
+
+    &:focus {
+      background-color: var(--color-brand-violet);
+      color: white;
+    }
+    &:focus svg {
+      stroke: white;
+    }
+  }
+
+  &__button-miss {
+    background-color: transparent;
+    border: transparent;
+  }
+}

@@ -1,0 +1,13 @@
+.hero-title {
+    margin-top: 41px;
+    padding-left: 72px;
+     @media screen and (max-width: 768px) {
+        padding-left: 32px;
+        font-size: 24px;
+     }
+                 @media screen and (max-width: 532px) {
+       padding-left: 16px;
+       max-width: 152px;
+       margin-top: 16px;
+    }
+}
